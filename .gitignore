@@ -1,0 +1,6 @@
+*.pem
+*.env
+*.csv
+*.session
+.DS_Store
+*.pyc
