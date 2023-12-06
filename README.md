@@ -1,4 +1,4 @@
-<img width="1440" alt="Screenshot 2023-12-06 at 4 28 54 PM" src="https://github.com/DonovanVA/TelegramLanguageLearner/assets/86190604/850644be-c3c9-47ae-b64e-adfcd4f1604f">## Welcome to the telegram language Learner!
+## Welcome to the telegram language Learner!
 
 ##### This application aims to explore the use of telegram to help us pick up new languages ASAP.
 <img width="1440" alt="Screenshot 2023-12-06 at 4 28 54 PM" src="https://github.com/DonovanVA/TelegramLanguageLearner/assets/86190604/c1e2996f-0daf-4cb8-a79a-7b00e6c784f2">
