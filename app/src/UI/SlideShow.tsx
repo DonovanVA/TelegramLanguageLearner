@@ -2,8 +2,9 @@ import React, { useReducer } from "react";
 import { TranslationData } from "../Types/translation_data";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { SvgIcon } from "@mui/material";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import { customTheme } from "../Themes/themeController";
+import { postPronunciation } from "../APIs/sendTranslated";
 interface State {
   currentIndex: number;
 }
@@ -132,6 +133,19 @@ export default function SlideShow({
           </div>
         </div>
         {/* Replace 'someField' with the field name you want to display */}
+        {currentData?.translation && currentData?.language_code && (
+          <div
+            style={{ cursor: "pointer", marginTop:24, marginLeft: 20 }}
+            onClick={() =>
+              postPronunciation(
+                currentData.translation,
+                currentData.language_code
+              )
+            }
+          >
+            <VolumeUpIcon />
+          </div>
+        )}
       </div>
 
       <div

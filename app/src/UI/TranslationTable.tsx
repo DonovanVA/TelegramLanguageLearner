@@ -1,6 +1,7 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import { TranslationData } from "../Types/translation_data";
-
+import { postPronunciation } from "../APIs/sendTranslated";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 export default function TranslationTable({
   translatedDataRows,
 }: {
@@ -42,6 +43,27 @@ export default function TranslationTable({
       width: 130,
       align: "center",
       headerAlign: "center",
+    },
+    {
+      field: "sound",
+      headerName: "Sound",
+      width: 130,
+      align: "center",
+      headerAlign: "center",
+      renderCell: (params) => {
+        const { translation, language_code } = params.row;
+        return (
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              translatedDataRows &&
+              postPronunciation(translation, language_code)
+            }
+          >
+            <VolumeUpIcon />
+          </div>
+        );
+      },
     },
   ];
 
