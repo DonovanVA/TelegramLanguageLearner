@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { getSendTranslated } from "./APIs/sendTranslated";
 import { RawTranslationData, TranslationData } from "./Types/translation_data";
 import TranslationTable from "./UI/TranslationTable";
-import BasicButton from "./UI/PrimaryButton";
 import PrimaryButton from "./UI/PrimaryButton";
 import SecondaryButton from "./UI/SecondaryButton";
 import SlideShow from "./UI/SlideShow";
@@ -46,6 +45,7 @@ function App() {
         height: "100vh",
       }}
     >
+      <h3 style={{display:"flex",flexDirection:"column",color:"white", fontSize:30}}>The Telegram Language Learner!</h3>
       <div
         style={{
           display: "flex",
